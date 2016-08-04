@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+	<head>
+		<title>API Project</title> <!-- Page Title -->
+			<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+			<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+			<script src="https://code.jquery.com/jquery.js"></script>
+
+
+
+			<script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+			<script>
+			  // Initialize Firebase
+			  var config = {
+			    apiKey: "AIzaSyBljiKMbibbUJ9WJLfYp36R-QKsb1I61J4",
+			    authDomain: "my-first-database-58d41.firebaseapp.com",
+			    databaseURL: "https://my-first-database-58d41.firebaseio.com",
+			    storageBucket: "my-first-database-58d41.appspot.com",
+			  };
+			  firebase.initializeApp(config);
+			</script>
+
+
+			
+	</head>
+	<body>
+		<div>
+			<h1>Page Title</h1>
+		</div>
+
+		<div>
+			<form>
+			  <p>Phrase:</p>
+			  <input type="text" name="phrase">
+			  <br>
+			</form>
+		</div>
+
+		<div>
+			<form action="action_page.php">
+				<select name="language">
+
+				    <option value="pirate">Pirate</option>
+				    <option value="dothraki">Dothraki</option>
+				    <option value="yoda">Yoda</option>
+
+				</select>
+	  				<br><br>
+	 			<input type="submit">
+			</form>
+		</div>
+
+		<div class="gifHome"> <!-- gif will got here -->
+		</div>
+
+		<div>
+			<form action="action_page.php">
+				<select name="location">
+				    <option value="left">Left</option>
+				    <option value="right">Right</option>
+				    <option value="top">Top</option>
+				    <option value="bottom">Bottom</option>
+				</select>
+	  				<br><br>
+	 			<input type="submit">
+			</form>
+		</div>
+
+		<div>
+			<form action="action_page.php">
+
+				<select name="size">
+
+					<option value="large">Large</option>
+				    <option value="medium">Medium</option>
+				    <option value="small">Small</option>
+	
+				</select>
+	  				<br><br>
+	 			<input type="submit">
+			</form>
+		</div>
+
+		<div> <!-- new gif button -->
+			<button class="newGif">Create New .Gif
+			</button>
+		</div>
+
+		<div> 
+		<button class="facebook">FaceBook
+		</button>
+		<button class="twitter"> Twitter
+		</button>
+		<button class="pintrest"> Pintrest
+		</button>
+
+		</div>
+
+
+
+
+	</body>
+</html>
