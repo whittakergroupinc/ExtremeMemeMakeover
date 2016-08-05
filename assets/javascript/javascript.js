@@ -1,13 +1,25 @@
 	var voice = "yoda";
 
+	var languageSelect = "";
 
+	function pullVoice () {
+
+			languageSelect = $( "#language option:selected" ).val(); 
+
+			console.log ("Pull Voice");
+			console.log ("------------");
+			console.log (languageSelect);
+		
+
+	}
 
 	
 	function pullTranslation(filterTranslate) {
 
 		var userStatement = "This is test text";
 
-
+		console.log (languageSelect);
+		
 		var replaced = userStatement.split(' ').join('%20');
 		
 
@@ -19,6 +31,7 @@
 
 	             console.log (response);
 	             var translatedState = response.contents.translated;
+	             console.log ("----New Sentence----")
 	             console.log (translatedState); 
 	     });
  	}
@@ -31,12 +44,26 @@
                 url: queryURL,
                 method: 'GET'
             })
-         .done(function(response) {
-                
+         .done(function(response) {	
 
         console.log(response)
+
+
+
+
     	});
 
 	}
 
 	pullGif(voice);
+
+	     $('#button').on('click', function() {
+
+
+
+	     	pullVoice();
+
+	     	pullTranslation(languageSelect);
+
+
+	     });
