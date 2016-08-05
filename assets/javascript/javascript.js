@@ -2,9 +2,14 @@
 
 	var languageSelect = "";
 
+	var inputPhrase = "";
+
+
 	function pullVoice () {
 
 			languageSelect = $( "#language option:selected" ).val(); 
+
+			inputPhrase = $(".inputPhrase").val();
 
 			console.log ("Pull Voice");
 			console.log ("------------");
@@ -14,16 +19,17 @@
 	}
 
 	
-	function pullTranslation(filterTranslate) {
+	function pullTranslation(filterTranslate, userStatement) {
 
-		var userStatement = "This is test text";
 
 		console.log (languageSelect);
-		
+
 		var replaced = userStatement.split(' ').join('%20');
 		
+		console.log ("----Phrase with %20-----");
+		console.log (replaced);
 
-		 var queryURL = "http://api.funtranslations.com/translate/" + filterTranslate + ".json?text=" + userStatement;
+		 var queryURL = "http://api.funtranslations.com/translate/" + filterTranslate + ".json?text=" + replaced + "&api_key=_8aMBjVm6VuS6l8C1H9H8geF";
 
 	        //
 	    $.ajax({url: queryURL, method: 'GET'})
@@ -57,13 +63,19 @@
 
 	pullGif(voice);
 
-	     $('#button').on('click', function() {
+	     $('.phraseLanguage').on('click', function() {
 
 
 
 	     	pullVoice();
 
-	     	pullTranslation(languageSelect);
+	     	console.log (inputPhrase);
+
+	     	pullTranslation(languageSelect, inputPhrase);
+
+	     	
+
+
 
 
 	     });
