@@ -31,13 +31,15 @@
 		</div>
 
 		<div>
-					  <p>Phrase:</p>
-			  <input type="text" name="phrase" id="inputPhrase">
+			<form>
+			  <p>Phrase:</p>
+			  <input type="text" name="phrase" class="inputPhrase">
 			  <br>
-		
+			</form>
 		</div>
 
 		<div>
+			<form class="formLanguage">
 				<select name="language" id="language">
 
 				    <option value="pirate">Pirate</option>
@@ -46,15 +48,15 @@
 
 				</select>
 	  				<br><br>
-	 			<input type="submit" id="phraseLanguage">
-			
+	 			<input type="submit" class="phraseLanguage">
+			</form>
 		</div>
 
-		<div id="gifHome"> <!-- gif will got here -->
+		<div class="gifHome"> <!-- gif will got here -->
 		</div>
 
 		<div>
-
+			<form action="action_page.php" class="formLocation">
 				<select name="location" id="location">
 				    <option value="left">Left</option>
 				    <option value="right">Right</option>
@@ -62,12 +64,12 @@
 				    <option value="bottom">Bottom</option>
 				</select>
 	  				<br><br>
-	 			<input type="submit" id="inputLocation">
-			
+	 			<input type="submit" class="inputLocation">
+			</form>
 		</div>
 
 		<div>
-			
+			<form action="action_page.php" class="formSize">
 
 				<select name="size" id="size">
 
@@ -77,21 +79,21 @@
 	
 				</select>
 	  				<br><br>
-	 			<input type="submit" id="inputSize">
-			
+	 			<input type="submit" class="inputSize">
+			</form>
 		</div>
 
 		<div> <!-- new gif button -->
-			<button id="newGif">Create New .Gif
+			<button class="newGif">Create New .Gif
 			</button>
 		</div>
 
 		<div> 
-		<button id="facebook">FaceBook
+		<button class="facebook">FaceBook
 		</button>
-		<button id="twitter"> Twitter
+		<button class="twitter"> Twitter
 		</button>
-		<button id="pintrest"> Pintrest
+		<button class="pintrest"> Pintrest
 		</button>
 
 		</div>
