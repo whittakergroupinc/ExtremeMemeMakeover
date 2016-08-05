@@ -33,14 +33,14 @@
 		<div>
 			<form>
 			  <p>Phrase:</p>
-			  <input type="text" name="phrase">
+			  <input type="text" name="phrase" class="inputPhrase">
 			  <br>
 			</form>
 		</div>
 
 		<div>
-			<form action="action_page.php">
-				<select name="language">
+			<form class="formLanguage">
+				<select name="language" id="language">
 
 				    <option value="pirate">Pirate</option>
 				    <option value="dothraki">Dothraki</option>
@@ -48,7 +48,7 @@
 
 				</select>
 	  				<br><br>
-	 			<input type="submit">
+	 			<input type="submit" class="phraseLanguage">
 			</form>
 		</div>
 
@@ -56,22 +56,22 @@
 		</div>
 
 		<div>
-			<form action="action_page.php">
-				<select name="location">
+			<form action="action_page.php" class="formLocation">
+				<select name="location" id="location">
 				    <option value="left">Left</option>
 				    <option value="right">Right</option>
 				    <option value="top">Top</option>
 				    <option value="bottom">Bottom</option>
 				</select>
 	  				<br><br>
-	 			<input type="submit">
+	 			<input type="submit" class="inputLocation">
 			</form>
 		</div>
 
 		<div>
-			<form action="action_page.php">
+			<form action="action_page.php" class="formSize">
 
-				<select name="size">
+				<select name="size" id="size">
 
 					<option value="large">Large</option>
 				    <option value="medium">Medium</option>
@@ -79,7 +79,7 @@
 	
 				</select>
 	  				<br><br>
-	 			<input type="submit">
+	 			<input type="submit" class="inputSize">
 			</form>
 		</div>
 
